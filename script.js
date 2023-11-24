@@ -5,7 +5,7 @@ let pkm = document.getElementById("pokemonInput");
 
 function callApi() {
     let random = Math.floor(Math.random() * 900) + 1;
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pkm.value.trim() ? pkm.value.trim() : random}/`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pkm.value.trim() ? pkm.value.trim().toLowerCase() : random}/`)
         .then(res => res.json())
         .then(data => {
 
@@ -68,7 +68,7 @@ function callApi() {
                                     </div>              
                                 `;
         })
-        .catch(e => console.error(new Error(e)));
+        .catch(e => alert("The name of the Pokemon is not correct"));
 }
 
 apiButton.addEventListener("click", callApi);

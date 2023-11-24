@@ -219,6 +219,8 @@ nav {
   background-color: #9147ff;
   color: white;
   padding: 0 10px;
+  height: 50px;
+  min-width: 70px;
 }
 .btn:hover {
   background-color: #772ce8;
@@ -235,7 +237,8 @@ input {
   color: rgb(14, 14, 16);
   background: #dee1e2;
   /* display: block; */
-  height: 36px;
+  height: 40px;
+  min-width:15%;
 }
 
 input:hover {
