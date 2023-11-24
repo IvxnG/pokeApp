@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .pokedex {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .pokemon {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    min-width: 160px;
+    min-height: 297px;
+    max-width: 400px;
+  }
+  .pokemonStats {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
+    padding: 10px;
+    margin: 10px;
+    min-width: 200px;
+    min-height: 297px;
+    max-width: 400px;
+  }
+  
+  .pokemon img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #e4400d;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+
+  .hp{
+    background-color: lawngreen;
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .attack{
+    background-color: rgb(238, 96, 96);
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .defense{
+    background-color: aqua;
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .special-attack{
+    background-color: violet;
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .special-defense{
+    background-color: forestgreen;
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .speed{
+    background-color: lightblue;
+    border: solid 0.5px grey ;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  .bar{
+    min-height: 20px;
+  }
+  .statsBars{
+    align-items:first baseline;
+  }
