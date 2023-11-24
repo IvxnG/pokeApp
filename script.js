@@ -1,7 +1,7 @@
-let apiButton = document.getElementById("apiButton");
-let apiData = document.getElementById("apiData");
+const apiButton = document.getElementById("apiButton");
+const apiData = document.getElementById("apiData");
 let pokeData = document.querySelector(".pokedex");
-let pkm = document.getElementById("pokemonInput");
+const pkm = document.getElementById("pokemonInput");
 
 function callApi() {
     let random = Math.floor(Math.random() * 900) + 1;
@@ -71,7 +71,15 @@ function callApi() {
         .catch(e => alert("The name of the Pokemon is not correct"));
 }
 
-apiButton.addEventListener("click", callApi);
+function handleApiButtonClick() {
+    apiButton.removeEventListener("click", handleApiButtonClick);
+    callApi();
+    setTimeout(() => {
+        apiButton.addEventListener("click", handleApiButtonClick);
+    }, 1000); // Espera 1 segundo antes de permitir otro clic
+}
+
+apiButton.addEventListener("click", handleApiButtonClick);
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('mobile-menu');

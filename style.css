@@ -248,3 +248,7 @@ input:focus {
   border-color: #9147ff;
   background: #fff;
 }
+.btn:active {
+    /* Agrega estilos aquí, por ejemplo, un cambio de color o sombra */
+    color: #000000;
+}
