@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input type="text" id="pokemonInput" />
-    <button id="apiButton">Buscar</button>
-    <div id="img"></div>
-
-    <center>
-      <div class="pokedex">
-        <div class="pokemon">
-          <img src="pokemon.png" alt="Nombre del Pokémon" /><img
-            src="pokemon.png"
-            alt="Nombre del Pokémon"
-          />
-          <h2>Bulbasaur</h2>
-          <p>Número de la Pokédex: #001</p>
-          <p>Tipo: Planta/Veneno</p>
-          <p>Altura: 0.7 m</p>
-          <p>Peso: 6.9 kg</p>
-        </div>
-      </div>
-    </center>
+    <header>
+        <div class="logo">PokeData</div>
+        <nav>
+          <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Pokédex</a></li>
+            <li><a href="#">Equipo</a></li>
+            <li><a href="https://github.com/IvxnG/pokeApp">GitHb</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br>
+      <center><input type="text" id="pokemonInput" placeholder="Search Empty for Random"/>
+      <button id="apiButton" class="btn">Search</button></center>
+      <center><div class="pokedex"></div></center>
     <script src="script.js"></script>
   </body>
 </html>

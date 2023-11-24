@@ -1,114 +1,247 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-  }
-  
-  .pokedex {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .pokemon {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.pokedex {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pokemon {
+  background-color: rgb(225, 225, 225);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 1, 1);
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  min-width: 160px;
+  min-height: 297px;
+  max-width: 400px;
+}
+.pokemonStats {
+  background-color: rgb(225, 225, 225);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 1, 1);
+  padding: 10px;
+  margin: 10px;
+  min-width: 200px;
+  min-height: 297px;
+  max-width: 400px;
+}
+
+.pokemon img {
+  max-width: 150px;
+  height: 150px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #e4400d;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.hp {
+  background-color: lawngreen;
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.attack {
+  background-color: rgb(238, 96, 96);
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.defense {
+  background-color: aqua;
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.special-attack {
+  background-color: violet;
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.special-defense {
+  background-color: forestgreen;
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.speed {
+  background-color: lightblue;
+  border: solid 0.5px grey;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.bar {
+  min-height: 20px;
+}
+.statsBars {
+  align-items: first baseline;
+}
+header {
+  background-color: #4827ec;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffd700; /* Amarillo Pikachu */
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
     text-align: center;
-    padding: 10px;
-    margin: 10px;
-    min-width: 160px;
-    min-height: 297px;
-    max-width: 400px;
-  }
-  .pokemonStats {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 1, 0.5);
-    padding: 10px;
-    margin: 10px;
-    min-width: 200px;
-    min-height: 297px;
-    max-width: 400px;
-  }
-  
-  .pokemon img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #000;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    color: #e4400d;
-  }
-  
-  p {
-    margin: 5px 0;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #e4400d;
+    text-align: center;
+    align-items: center;
   }
 
-  .hp{
-    background-color: lawngreen;
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
+  .menu.active {
+    display: flex;
   }
-  .attack{
-    background-color: rgb(238, 96, 96);
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
+
+  .menu li {
+    margin: 10px 0;
+    margin-right: 0;
   }
-  .defense{
-    background-color: aqua;
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
+
+  .menu-toggle {
+    display: flex;
   }
-  .special-attack{
-    background-color: violet;
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-  .special-defense{
-    background-color: forestgreen;
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-  .speed{
-    background-color: lightblue;
-    border: solid 0.5px grey ;
-    border-radius: 5px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-top: 3px;
-    margin-bottom: 5px;
-  }
-  .bar{
-    min-height: 20px;
-  }
-  .statsBars{
-    align-items:first baseline;
-  }
+}
+.data {
+  color: rgb(48, 47, 47);
+}
+.btn {
+  border-radius: 5px;
+  padding: 5px;
+  color: red;
+  background-color: blue;
+}
+
+.btn {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 30px;
+  background-color: #9147ff;
+  color: white;
+  padding: 0 10px;
+}
+.btn:hover {
+  background-color: #772ce8;
+}
+
+input {
+  font-size: 14px;
+  border-radius: 6px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in,
+    background-color 100ms ease-in;
+  border: 2px solid #dee1e2;
+  color: rgb(14, 14, 16);
+  background: #dee1e2;
+  /* display: block; */
+  height: 36px;
+}
+
+input:hover {
+  border-color: #ccc;
+}
+input:focus {
+  border-color: #9147ff;
+  background: #fff;
+}

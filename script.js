@@ -30,22 +30,22 @@ function callApi() {
             stats.forEach(stat => {
                 switch (stat.stat.name) {
                     case "hp":
-                        statsSrt += `<div class="hp bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Hp</p><div class="hp bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                     case "attack":
-                        statsSrt += `<div class="attack bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Attack</p><div class="attack bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                     case "defense":
-                        statsSrt += `<div class="defense bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Defence</p><div class="defense bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                     case "special-attack":
-                        statsSrt += `<div class="special-attack bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Spd.Attack</p><div class="special-attack bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                     case "special-defense":
-                        statsSrt += `<div class="special-defense bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Spd.Defence</p><div class="special-defense bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                     case "speed":
-                        statsSrt += `<div class="speed bar" style="width:${stat.base_stat + 50}px">${stat.base_stat}</div> `;
+                        statsSrt += `<p>Speed</p><div class="speed bar" style="width:${stat.base_stat + 60}px">${stat.base_stat}</div> `;
                         break;
                 }
                 
@@ -72,3 +72,25 @@ function callApi() {
 }
 
 apiButton.addEventListener("click", callApi);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('mobile-menu');
+    const menu = document.querySelector('.menu');
+  
+    menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('active');
+    });
+  
+    document.addEventListener('click', function (e) {
+      const target = e.target;
+  
+      if (!menu.contains(target) && !menuToggle.contains(target)) {
+        menu.classList.remove('active');
+      }
+    });
+  
+    // Cerrar el menú al hacer clic en un elemento del menú
+    menu.addEventListener('click', function () {
+      menu.classList.remove('active');
+    });
+});
