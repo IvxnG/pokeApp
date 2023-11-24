@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+  min-height: 100vh;
 }
 
 .pokedex {
@@ -123,6 +124,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -179,7 +181,7 @@ nav {
     top: 0px;
     left: 0;
     width: 100%;
-    background-color: #e4400d;
+    background-color: #4827ec;
     text-align: center;
     align-items: center;
   }
@@ -238,7 +240,7 @@ input {
   background: #dee1e2;
   /* display: block; */
   height: 40px;
-  min-width:15%;
+  min-width:20%;
 }
 
 input:hover {
@@ -251,4 +253,13 @@ input:focus {
 .btn:active {
     /* Agrega estilos aquí, por ejemplo, un cambio de color o sombra */
     color: #000000;
+}
+
+footer {
+    background-color: #4827ec; 
+    padding: 10px;
+    text-align: center;
+    /*position: static;
+    bottom: 0;*/
+    width: 100%;
 }

@@ -59,8 +59,8 @@ function callApi() {
                                     <p>Pokedex Order: <b>#${data.order}</b></p>
                                     <p>Type: <b>${typesStr} </b></p>
                                     <p>Skills : <b>${abilitiesStr} </b></p>
-                                    <p>Height: <b>${data.height} m </b></p>
-                                    <p>Weight: <b>${data.weight} kg </b></p>
+                                    <p>Height: <b>${data.height/10} m </b></p>
+                                    <p>Weight: <b>${data.weight/10} kg </b></p>
                                 </div>
                                 <div class="pokemonStats">
                                     <center><h2>Stats</h2></center>
