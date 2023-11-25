@@ -1,10 +1,10 @@
-const apiButton = document.getElementById("apiButton");
-const apiData = document.getElementById("apiData");
+let apiButton = document.getElementById("apiButton");
+let apiData = document.getElementById("apiData");
 let pokeData = document.querySelector(".pokedex");
-const pkm = document.getElementById("pokemonInput");
+let pkm = document.getElementById("pokemonInput");
 
 function callApi() {
-    let random = Math.floor(Math.random() * 900) + 1;
+    let random = Math.floor(Math.random() * 1016) + 1;
     fetch(`https://pokeapi.co/api/v2/pokemon/${pkm.value.trim() ? pkm.value.trim().toLowerCase() : random}/`)
         .then(res => res.json())
         .then(data => {
@@ -14,10 +14,15 @@ function callApi() {
             let types = data.types;
             let typesStr = "";
 
-            types.forEach(type => {
-                typesStr += " " + type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
-            })
+            //Nombre del tipo 
+            // types.forEach(type => {
+            //     typesStr += " " + type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
+            // })
 
+            //img del tipo
+            types.forEach(type => {
+                typesStr += `<img src="../tipos/${type.type.name}.png" class="pkmType"></img>`;
+            })
             let abilities = data.abilities;
             let abilitiesStr = "";
 
@@ -53,11 +58,11 @@ function callApi() {
 
             pokeData.innerHTML = `
                                 <div class="pokemon">
-                                    <img src="${sprites.front_default}" alt="Nombre del Pokémon" />
-                                    <img src="${sprites.back_default}" alt="Nombre del Pokémon"/>
+                                    <img src="${sprites.front_default}" class="pokeImg" alt="Nombre del Pokémon" />
+                                    <img src="${sprites.back_default}" class="pokeImg" alt="Nombre del Pokémon"/>
                                     <h2>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h2>
                                     <p>Pokedex Order: <b>#${data.order}</b></p>
-                                    <p>Type: <b>${typesStr} </b></p>
+                                    <p><b>${typesStr}</b></p>
                                     <p>Skills : <b>${abilitiesStr} </b></p>
                                     <p>Height: <b>${data.height/10} m </b></p>
                                     <p>Weight: <b>${data.weight/10} kg </b></p>
@@ -102,3 +107,5 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.classList.remove('active');
     });
 });
+
+

@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Dosis', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("back.jpg");
+  background-image: url("../back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   min-height: 100vh;
+  font-size: large;
 }
 
 .pokedex {
@@ -41,7 +44,7 @@ body {
   max-width: 400px;
 }
 
-.pokemon img {
+.pokeImg {
   max-width: 150px;
   height: 150px;
   border: 2px solid #000;
@@ -124,7 +127,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98%;
 }
 
 .logo {
@@ -262,4 +265,10 @@ footer {
     /*position: static;
     bottom: 0;*/
     width: 100%;
+}
+.pkmType{
+  width: 50px;
+  max-height: 50px;
+  border-radius: 40px;
+  border: #000 solid 1px;
 }
