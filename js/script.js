@@ -58,8 +58,8 @@ function callApi() {
 
             pokeData.innerHTML = `
                                 <div class="pokemon">
-                                    <img src="${sprites.front_default}" class="pokeImg" alt="Nombre del Pokémon" />
-                                    <img src="${sprites.back_default}" class="pokeImg" alt="Nombre del Pokémon"/>
+                                    <img src="${sprites.front_default}" class="pokeImg" alt="Front image not available" />
+                                    <img src="${sprites.back_default}" class="pokeImg" alt="Back image not available"/>
                                     <h2>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h2>
                                     <p>Pokedex Order: <b>#${data.order}</b></p>
                                     <p><b>${typesStr}</b></p>
