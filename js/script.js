@@ -21,7 +21,7 @@ function callApi() {
 
             //img del tipo
             types.forEach(type => {
-                typesStr += `<img src="/tipos/${type.type.name}.png" class="pkmType"></img>`;
+                typesStr += `<img src="tipos/${type.type.name}.png" class="pkmType"></img>`;
             })
             let abilities = data.abilities;
             let abilitiesStr = "";
